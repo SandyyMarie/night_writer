@@ -12,6 +12,9 @@ class NightWriter
 
         @translated_txt = []
         write
+        translate("h")   
+        require 'pry'; binding.pry
+
     end
 
     def write
@@ -49,7 +52,13 @@ class NightWriter
         alphabet["z"] = [line1: "0.", line2: ".0", line3: "00"]
 
         translate = alphabet[letter.downcase]
-
+        sentence1 = alphabet[letter.downcase][0][:line1]
+        sentence2 = alphabet[letter.downcase][0][:line2]
+        sentence3 = alphabet[letter.downcase][0][:line3]
+        # puts sentence1 
+        # puts sentence2  
+        # puts sentence3
+        puts "#{sentence1}\n#{sentence2}\n#{sentence3}"
     end
 
     def print
