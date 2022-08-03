@@ -2,7 +2,10 @@ require './lib/night_writer.rb'
 
 RSpec.describe NightWriter do
     before :each do
-        @nightwriter = NightWriter.new
+        ARGV[1] = "braille.txt"
+        ARGV[0] = "message.txt"
+        @nightwriter = NightWriter.new(ARGV[0], ARGV[1])
+
     end
 
     it 'exists' do
