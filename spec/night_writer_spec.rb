@@ -13,9 +13,9 @@ RSpec.describe NightWriter do
         expect(@nightwriter.translate("h")).to eq("0.\n00\n..")
     end
 
-    # it 'can count the lines in the given file' do
-    #     expect() #read_file.lines to return characters?
-    # end
+    it 'can count the lines in the given file' do
+        expect(@nightwriter.read_file.join.length).to eq(256) 
+    end
 
-    
+
 end
