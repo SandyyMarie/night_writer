@@ -1,1 +1,1 @@
-hello world
+this is my example text which I will use for my braille project because I need two hundred and fifty six characters to use to translate from English to braille without any punctuation aside from the occasional capital letter that I already accounted for ok
