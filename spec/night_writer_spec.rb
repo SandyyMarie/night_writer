@@ -2,9 +2,11 @@ require './lib/night_writer.rb'
 
 RSpec.describe NightWriter do
     before :each do
-        ARGV[1] = "braille.txt"
-        ARGV[0] = "message.txt"
-        @nightwriter = NightWriter.new(ARGV[0], ARGV[1])
+        # allow(@nightwriter).to receive(ARGV[0]).and_return("message.txt")
+        # allow(@nightwriter).to receive(ARGV[1]).and_return("braille.txt")
+        @nightwriter = NightWriter.new
+
+        #how to initialize with text files
 
     end
 
@@ -20,5 +22,8 @@ RSpec.describe NightWriter do
         expect(@nightwriter.read_file.join.length).to eq(256) 
     end
 
+    it 'can print "hello world"' do
+        expect(@nightwriter.translate("hello world")).to eq("0.0.0.0.0..00.0.0.00\n00.00.0..000.0000..0\n....0.0.0..00.0.0...")
+    end
 
 end

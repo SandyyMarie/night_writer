@@ -60,7 +60,7 @@ class NightWriter
                 line3 << alphabet[letter.downcase][0][:line3]
             end
         end
-        puts "#{line1}\n#{line2}\n#{line3}"
+        p "#{line1}\n#{line2}\n#{line3}"
     end
 
     def print
