@@ -62,6 +62,8 @@ class NightWriter
 
         translated(line1, line2, line3) #could turn into hash
         # puts "#{line1}\n#{line2}\n#{line3}"
+
+        #coming back to dividing each sentence into 40 braille characters each/80 dots wide
     end
 
     def print
