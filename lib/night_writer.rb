@@ -12,7 +12,7 @@ class NightWriter
 
         @translated_txt = []
         write
-        translate("h")   
+        translate("hello world")   
         require 'pry'; binding.pry
 
     end
@@ -21,9 +21,8 @@ class NightWriter
         @out_file.write(@read_file.join) #change read_file to whatever output i want
     end
 
-    def translate(letter)
-        translated = ""
-        alphabet = Hash.new
+    def translate(phrase)
+        alphabet = Hash.new(0)
         alphabet["a"] = [line1: "0.", line2: "..", line3: ".."]
         alphabet["b"] = [line1: "0.", line2: "0.", line3: ".."]
         alphabet["c"] = [line1: "00", line2: "..", line3: ".."]
@@ -51,14 +50,17 @@ class NightWriter
         alphabet["y"] = [line1: "00", line2: ".0", line3: "00"]
         alphabet["z"] = [line1: "0.", line2: ".0", line3: "00"]
 
-        translate = alphabet[letter.downcase]
-        sentence1 = alphabet[letter.downcase][0][:line1]
-        sentence2 = alphabet[letter.downcase][0][:line2]
-        sentence3 = alphabet[letter.downcase][0][:line3]
-        # puts sentence1 
-        # puts sentence2  
-        # puts sentence3
-        puts "#{sentence1}\n#{sentence2}\n#{sentence3}"
+        line1 = ""
+        line2 = ""
+        line3 = ""
+        phrase.chars.each do |letter|
+            if letter != " "
+                line1 << alphabet[letter.downcase][0][:line1]
+                line2 << alphabet[letter.downcase][0][:line2]
+                line3 << alphabet[letter.downcase][0][:line3]
+            end
+        end
+        puts "#{line1}\n#{line2}\n#{line3}"
     end
 
     def print
