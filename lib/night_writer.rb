@@ -11,14 +11,13 @@ class NightWriter
         puts "Created '#{ARGV[1]}' containing #{@read_file.join.length} characters"
 
         @translated_txt = []
-        write
-        translate("hello world")   
-        require 'pry'; binding.pry
+        translate(@read_file.join)   
 
     end
 
-    def write
-        @out_file.write(@read_file.join) #change read_file to whatever output i want
+    def translated(translated1, translated2, translated3) #changed from name write, might need to update
+        final = "#{translated1}\n#{translated2}\n#{translated3}"
+        @out_file.write(final) #change read_file to whatever output i want
     end
 
     def translate(phrase)
@@ -60,7 +59,9 @@ class NightWriter
                 line3 << alphabet[letter.downcase][0][:line3]
             end
         end
-        p "#{line1}\n#{line2}\n#{line3}"
+
+        translated(line1, line2, line3) #could turn into hash
+        # puts "#{line1}\n#{line2}\n#{line3}"
     end
 
     def print
