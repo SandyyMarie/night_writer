@@ -1,1 +1,1 @@
-This is me testing to see if I need a statement with two hundred fifty six characters. This is much harder than expected so I suppose I will talk about my dog. Mocha is five years old and is a chocolate lab and loves to play with Pounce. Both so very goofy
+this is my example text which I will use for my braille project because I need two hundred and fifty six characters to use to translate from English to braille without any punctuation aside from the occasional capital letter that I already accounted for ok
