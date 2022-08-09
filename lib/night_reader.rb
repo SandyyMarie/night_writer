@@ -1,4 +1,4 @@
-class NightWriter
+class NightReader
 
     attr_reader :out_file, 
                 :read_file,
@@ -9,21 +9,21 @@ class NightWriter
     def initialize
         @out_file = File.new(ARGV[1], "w") #maybe .open
         @read_file = File.readlines(ARGV[0])
-        puts "Created '#{ARGV[1]}' containing #{@read_file.join.length} characters"
+        
+        # @translated_txt = []
+        translate(@read_file.join) 
 
-        @translated_txt = []
-        translate(@read_file.join)   
+        puts "Created '#{ARGV[1]}' containing #{@read_file.join.length / 6} characters" #might need to revisit
 
     end
 
-    def translated(translated1, translated2, translated3) #changed from name write, might need to update
-        final = "#{translated1}\n#{translated2}\n#{translated3}"
-        @out_file.write(final) #change read_file to whatever output i want
+    def to_write(final) #changed from name write, might need to update
+        @out_file.write(final)
     end
 
     def translate(phrase)
-        @alphabet = Hash.new #removed .new(0)
-        @alphabet[" "] = [line1: "..", line2: "..", line3: ".."] 
+        @alphabet = Hash.new(0)
+        @alphabet[" "] = [line1: "..", line2: "..", line3: ".."]
         @alphabet["a"] = [line1: "0.", line2: "..", line3: ".."]
         @alphabet["b"] = [line1: "0.", line2: "0.", line3: ".."]
         @alphabet["c"] = [line1: "00", line2: "..", line3: ".."]
@@ -61,38 +61,44 @@ class NightWriter
         @alphabet["("] = [line1: "..", line2: "00", line3: "00"]
         @alphabet[")"] = [line1: "..", line2: "00", line3: "00"]
         @alphabet["-"] = [line1: "..", line2: "..", line3: "00"]
-        @alphabet["*"] = [line1: "....", line2: ".0.0", line3: "0.0."] 
+        @alphabet["*"] = [line1: "....", line2: ".0.0", line3: "0.0."] #special case, needs to print twice
        
-       
-        line1 = ""
-        line2 = ""
-        line3 = ""
-        letter_counter = 0
-        phrase.chars.each do |letter|
-            
-            line1 << alphabet[letter.downcase][0][:line1]
-            line2 << alphabet[letter.downcase][0][:line2]
-            line3 << alphabet[letter.downcase][0][:line3]
-            letter_counter += 1
+        
+        back_to_letters = ""
 
-            # if letter_counter == 40
-            #     line1 << "\n" + line2 + "\n" + line3 + "\n"
-            #     # line2 << "\n"
-            #     # line3 << "\n"
-            #     letter_counter = 0
-            # end
-        end
-        translated(line1, line2, line3) #could turn into hash
-        # puts "#{line1}\n#{line2}\n#{line3}"
+        phrase.split("\n")
+        line1 = phrase.split("\n")[0].scan(/.{2}/)
+        line2 = phrase.split("\n")[1].scan(/.{2}/)
+        line3 = phrase.split("\n")[2].scan(/.{2}/)
+        
+        to_be_translated = [line1, line2, line3]
+        to_translate_array = line1.zip(line2,line3)
 
-        #coming back to dividing each sentence into 40 braille characters each/80 dots wide
+        
+        to_write(to_alphabet(to_translate_array)) #could turn into hash
+# line1.scan(/.{2}/)
 
     end
 
-    def print
+    def to_alphabet(to_translate)
+        translated_txt = ""
+        # to_translate.each do |bletter|
+        #     require 'pry'; binding.pry
+        #     @alphabet.each do |aletter|
 
+        #     end
+        # end
+
+        # translated_array
+        to_translate.each do |bletter|
+            if bletter != nil
+                translated_txt << @alphabet.key([:line1 => bletter[0], :line2 => bletter[1], :line3 => bletter[2]])
+            end
+        end
+        translated_txt
+        #hash.key(value) => key
     end
 end
 
-nightwriter = NightWriter.new
-nightwriter 
+nightreader = NightReader.new
+nightreader
