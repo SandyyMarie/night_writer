@@ -22,7 +22,8 @@ class NightWriter
     end
 
     def translate(phrase)
-        @alphabet = Hash.new(0)
+        @alphabet = Hash.new #removed .new(0)
+        @alphabet[" "] = [line1: "..", line2: "..", line3: ".."] 
         @alphabet["a"] = [line1: "0.", line2: "..", line3: ".."]
         @alphabet["b"] = [line1: "0.", line2: "0.", line3: ".."]
         @alphabet["c"] = [line1: "00", line2: "..", line3: ".."]
@@ -49,7 +50,6 @@ class NightWriter
         @alphabet["x"] = [line1: "00", line2: "..", line3: "00"]
         @alphabet["y"] = [line1: "00", line2: ".0", line3: "00"]
         @alphabet["z"] = [line1: "0.", line2: ".0", line3: "00"]
-        @alphabet[" "] = [line1: "+", line2: "+", line3: "+"] #doesnt seem to be working yet
         @alphabet["."] = [line1: "..", line2: "00", line3: ".0"]
         @alphabet[","] = [line1: "..", line2: "0.", line3: ".."]
         @alphabet[";"] = [line1: "..", line2: "0.", line3: "0."]
@@ -61,18 +61,16 @@ class NightWriter
         @alphabet["("] = [line1: "..", line2: "00", line3: "00"]
         @alphabet[")"] = [line1: "..", line2: "00", line3: "00"]
         @alphabet["-"] = [line1: "..", line2: "..", line3: "00"]
-        @alphabet["*"] = [line1: "....", line2: ".0.0", line3: "0.0."] #special case, needs to print twice
+        @alphabet["*"] = [line1: "....", line2: ".0.0", line3: "0.0."] 
        
        
         line1 = ""
         line2 = ""
         line3 = ""
         phrase.chars.each do |letter|
-            if letter != " "
-                line1 << alphabet[letter.downcase][0][:line1]
-                line2 << alphabet[letter.downcase][0][:line2]
-                line3 << alphabet[letter.downcase][0][:line3]
-            end
+            line1 << alphabet[letter.downcase][0][:line1]
+            line2 << alphabet[letter.downcase][0][:line2]
+            line3 << alphabet[letter.downcase][0][:line3]
         end
 
         translated(line1, line2, line3) #could turn into hash

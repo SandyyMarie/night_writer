@@ -22,6 +22,7 @@ class NightReader
 
     def translate(phrase)
         @alphabet = Hash.new(0)
+        @alphabet[" "] = [line1: "..", line2: "..", line3: ".."]
         @alphabet["a"] = [line1: "0.", line2: "..", line3: ".."]
         @alphabet["b"] = [line1: "0.", line2: "0.", line3: ".."]
         @alphabet["c"] = [line1: "00", line2: "..", line3: ".."]
@@ -48,7 +49,6 @@ class NightReader
         @alphabet["x"] = [line1: "00", line2: "..", line3: "00"]
         @alphabet["y"] = [line1: "00", line2: ".0", line3: "00"]
         @alphabet["z"] = [line1: "0.", line2: ".0", line3: "00"]
-        @alphabet[" "] = [line1: "+", line2: "+", line3: "+"] #doesnt seem to be working yet
         @alphabet["."] = [line1: "..", line2: "00", line3: ".0"]
         @alphabet[","] = [line1: "..", line2: "0.", line3: ".."]
         @alphabet[";"] = [line1: "..", line2: "0.", line3: "0."]
