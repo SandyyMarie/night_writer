@@ -1,3 +1,4 @@
+require './spec/spec_helper'
 require './lib/night_writer.rb'
 
 RSpec.describe NightWriter do

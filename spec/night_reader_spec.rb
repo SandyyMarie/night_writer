@@ -1,3 +1,4 @@
+require './spec/spec_helper'
 require './lib/night_reader.rb'
 
 RSpec.describe NightReader do
