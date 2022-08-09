@@ -9,10 +9,11 @@ class NightReader
     def initialize
         @out_file = File.new(ARGV[1], "w") #maybe .open
         @read_file = File.readlines(ARGV[0])
-        puts "Created '#{ARGV[1]}' containing #{@read_file.join.length} characters"
-
+        
         # @translated_txt = []
-        translate(@read_file.join)   
+        translate(@read_file.join) 
+
+        puts "Created '#{ARGV[1]}' containing #{@read_file.join.length / 6} characters" #might need to revisit
 
     end
 
@@ -90,7 +91,9 @@ class NightReader
 
         # translated_array
         to_translate.each do |bletter|
-            translated_txt << @alphabet.key([:line1 => bletter[0], :line2 => bletter[1], :line3 => bletter[2]])
+            if bletter != nil
+                translated_txt << @alphabet.key([:line1 => bletter[0], :line2 => bletter[1], :line3 => bletter[2]])
+            end
         end
         translated_txt
         #hash.key(value) => key

@@ -67,16 +67,26 @@ class NightWriter
         line1 = ""
         line2 = ""
         line3 = ""
+        letter_counter = 0
         phrase.chars.each do |letter|
+            
             line1 << alphabet[letter.downcase][0][:line1]
             line2 << alphabet[letter.downcase][0][:line2]
             line3 << alphabet[letter.downcase][0][:line3]
-        end
+            letter_counter += 1
 
+            # if letter_counter == 40
+            #     line1 << "\n" + line2 + "\n" + line3 + "\n"
+            #     # line2 << "\n"
+            #     # line3 << "\n"
+            #     letter_counter = 0
+            # end
+        end
         translated(line1, line2, line3) #could turn into hash
         # puts "#{line1}\n#{line2}\n#{line3}"
 
         #coming back to dividing each sentence into 40 braille characters each/80 dots wide
+
     end
 
     def print
