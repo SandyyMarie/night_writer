@@ -10,9 +10,8 @@ class NightReader
         @read_file = File.readlines(ARGV[0])
         puts "Created '#{ARGV[1]}' containing #{@read_file.join.length} characters"
 
-        translate("hello world")
         # @translated_txt = []
-        # translate(@read_file.join)   
+        translate(@read_file.join)   
 
     end
 
@@ -49,19 +48,24 @@ class NightReader
         alphabet["y"] = [line1: "00", line2: ".0", line3: "00"]
         alphabet["z"] = [line1: "0.", line2: ".0", line3: "00"]
 
-        line1 = ""
-        line2 = ""
-        line3 = ""
-        phrase.chars.each do |letter|
-            if letter != " "
-                line1 << alphabet[letter.downcase][0][:line1]
-                line2 << alphabet[letter.downcase][0][:line2]
-                line3 << alphabet[letter.downcase][0][:line3]
-            end
-        end
+        back_to_letters = ""
+
+        phrase.split("\n")
+        line1 = phrase.split("\n")[0].scan(/.{2}/)
+        line2 = phrase.split("\n")[1].scan(/.{2}/)
+        line3 = phrase.split("\n")[2].scan(/.{2}/)
+        
+        to_be_translated = [line1, line2, line3]
+        require 'pry'; binding.pry
+        line1.zip(line2,line3)
+        
+        # i = 0
+        # while line1.count < i, i ++
+
+        # end
 
         translated(line1, line2, line3) #could turn into hash
-
+# line1.scan(/.{2}/)
 
     end
 end
