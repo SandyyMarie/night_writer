@@ -1,5 +1,4 @@
 module Dictionary
-
     def alphabet
         alphabet_index = Hash.new #removed .new(0), could be here or dictionary
         alphabet_index[" "] = [line1: "..", line2: "..", line3: ".."] 
