@@ -2,7 +2,6 @@ require_relative './dictionary'
 require_relative './translator'
 require_relative './doc_writer'
 
-
 class NightReader
     include Dictionary
     include Translator
@@ -14,12 +13,13 @@ class NightReader
     def initialize
         @out_file = File.new(ARGV[1], "w") #maybe .open
         @read_file = File.readlines(ARGV[0])
-        translate(@read_file.join) 
+        # translate_to_alphabet(@read_file.join) 
 
+        to_write(translate_to_alphabet(braille_splitter(@read_file.join))) #could turn into hash
         puts "Created '#{ARGV[1]}' containing #{@read_file.join.length / 6} characters" #might need to revisit
     end
 
-    def translate(phrase)
+    def braille_splitter(phrase)
         back_to_letters = ""
 
         phrase.split("\n")
@@ -30,10 +30,10 @@ class NightReader
         to_be_translated = [line1, line2, line3]
         to_translate_array = line1.zip(line2,line3)
 
-        to_write(to_alphabet(to_translate_array)) #could turn into hash
+        # to_write(translate_to_alphabet(to_translate_array)) #could turn into hash
     end
 
-    def to_alphabet(to_translate)
+    def translate_to_alphabet(to_translate)
         translated_txt = ""
         to_translate.each do |bletter|
             if bletter != nil

@@ -1,5 +1,5 @@
 module DocWriter
-    def to_write(final) #changed from name write, might need to update
-        @out_file.write(final) #change read_file to whatever output i want
+    def to_write(final)
+        @out_file.write(final) 
     end
 end
