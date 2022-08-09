@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sandymarie/turing/1module/projects/2207/night_writer/lib/night_reader.rb": {
+      "/Users/sandymarie/turing/1module/projects/2207/night_writer/lib/night_writer.rb": {
         "lines": [
           1,
           1,
@@ -16,10 +16,14 @@
           null,
           null,
           1,
+          null,
           1,
           0,
           0,
           0,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -125,76 +129,8 @@
           null,
           null
         ]
-      },
-      "/Users/sandymarie/turing/1module/projects/2207/night_writer/spec/night_writer_spec.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sandymarie/turing/1module/projects/2207/night_writer/lib/night_writer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0
-        ]
       }
     },
-    "timestamp": 1660081760
+    "timestamp": 1660087186
   }
 }

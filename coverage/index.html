@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-09T15:49:20-06:00">2022-08-09T15:49:20-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-09T17:19:46-06:00">2022-08-09T17:19:46-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  27.59%
+  22.35%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.28
+         0.22
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>6</b> files in total.
+    <b>4</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>116</b> relevant lines,
-    <span class="green"><b>32</b> lines covered</span> and
-    <span class="red"><b>84</b> lines missed. </span>
+    <b>85</b> relevant lines,
+    <span class="green"><b>19</b> lines covered</span> and
+    <span class="red"><b>66</b> lines missed. </span>
     (<span class="red">
-  27.59%
+  22.35%
 </span>
 )
   </div>
@@ -93,20 +93,9 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#fcc7ec24805faf5d55ab441e9900f13922b1a0dd" class="src_link" title="lib/night_reader.rb">lib/night_reader.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">73.33 %</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0.73</td>
-            
-          </tr>
-        
-          <tr class="t-file">
             <td class="strong t-file__name"><a href="#c53547c4662183255a4d4d987bde5eb4e33ef346" class="src_link" title="lib/night_writer.rb">lib/night_writer.rb</a></td>
             <td class="red strong cell--number t-file__coverage">73.33 %</td>
-            <td class="cell--number">25</td>
+            <td class="cell--number">26</td>
             <td class="cell--number">15</td>
             <td class="cell--number">11</td>
             <td class="cell--number">4</td>
@@ -122,17 +111,6 @@
             <td class="cell--number">4</td>
             <td class="cell--number">20</td>
             <td class="cell--number">0.17</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#d8e0f22c326f7dd96de5b6c75d2fc78e50c3d3b9" class="src_link" title="spec/night_writer_spec.rb">spec/night_writer_spec.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">12.50 %</td>
-            <td class="cell--number">35</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">0.13</td>
             
           </tr>
         
@@ -765,279 +743,6 @@
 </div>
 
       
-        <div class="source_table" id="fcc7ec24805faf5d55ab441e9900f13922b1a0dd">
-  <div class="header">
-    <h3>lib/night_reader.rb</h3>
-    <h4>
-      <span class="red">
-  73.33%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require_relative &#39;./dictionary&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require_relative &#39;./translator&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require_relative &#39;./doc_writer&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class NightReader</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    include Dictionary</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    include Translator</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    include DocWriter</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    attr_reader :out_file, </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">                :read_file</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    def initialize</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        @out_file = File.new(ARGV[1], &quot;w&quot;) #maybe .open</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">        @read_file = File.readlines(ARGV[0])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">        to_write(translate_to_alphabet(braille_splitter(@read_file.join))) #could turn into hash</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby">        puts &quot;Created &#39;#{ARGV[1]}&#39; containing #{@read_file.join.length / 6} characters&quot; #might need to revisit</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">nightreader = NightReader.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">nightreader</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
         <div class="source_table" id="c53547c4662183255a4d4d987bde5eb4e33ef346">
   <div class="header">
     <h3>lib/night_writer.rb</h3>
@@ -1208,7 +913,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">        # require &#39;pry&#39;; binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
@@ -1219,7 +935,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
+          <li class="missed" data-hits="0" data-linenumber="16">
             
             
 
@@ -1230,7 +946,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
+          <li class="missed" data-hits="0" data-linenumber="17">
             
             
 
@@ -1241,7 +957,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="17">
+          <li class="missed" data-hits="0" data-linenumber="18">
             
             
 
@@ -1252,7 +968,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -1263,7 +979,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -1274,7 +990,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -1285,7 +1001,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
@@ -1296,7 +1012,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -1307,7 +1023,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -1318,7 +1034,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
+          <li class="covered" data-hits="1" data-linenumber="25">
             <span class="hits">1</span>
             
 
@@ -1329,7 +1045,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
+          <li class="missed" data-hits="0" data-linenumber="26">
             
             
 
@@ -1768,422 +1484,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="d8e0f22c326f7dd96de5b6c75d2fc78e50c3d3b9">
-  <div class="header">
-    <h3>spec/night_writer_spec.rb</h3>
-    <h4>
-      <span class="red">
-  12.5%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>14</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;./spec/spec_helper&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;./lib/night_writer.rb&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby">RSpec.describe NightWriter do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby">    before :each do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">        # allow(@nightwriter).to receive(ARGV[0]).and_return(&quot;message.txt&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">        # allow(@nightwriter).to receive(ARGV[1]).and_return(&quot;braille.txt&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">        @nightwriter = NightWriter.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">        #how to initialize with text files</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    it &#39;exists&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">        expect(@nightwriter).to be_a(NightWriter)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    it &#39;can translate a given letter to the braille representation&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">        expect(@nightwriter.translate(&quot;h&quot;)).to eq(&quot;0.\n00\n..&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">    it &#39;can count the lines in the given file&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">        expect(@nightwriter.read_file.join.length).to eq(256) </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">    it &#39;can print &quot;hello world&quot;&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">        expect(@nightwriter.translate(&quot;hello world&quot;)).to eq(&quot;0.0.0.0.0..00.0.0.00\n00.00.0..000.0000..0\n....0.0.0..00.0.0...&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">    it &#39;can return the alphabet hash&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">        expect(@nightwriter.alphabet).to be_a(Hash)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">        expect(@nightwriter.alphabet[&quot;a&quot;]).to eq([line1: &quot;0.&quot;, line2: &quot;..&quot;, line3: &quot;..&quot;])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
             
             
 
