@@ -26,4 +26,9 @@ RSpec.describe NightWriter do
         expect(@nightwriter.translate("hello world")).to eq("0.0.0.0.0..00.0.0.00\n00.00.0..000.0000..0\n....0.0.0..00.0.0...")
     end
 
+    it 'can return the alphabet hash' do
+        expect(@nightwriter.alphabet).to be_a(Hash)
+        expect(@nightwriter.alphabet["a"]).to eq([line1: "0.", line2: "..", line3: ".."])
+    end
+
 end
