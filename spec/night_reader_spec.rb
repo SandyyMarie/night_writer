@@ -21,4 +21,8 @@ RSpec.describe NightReader do
         expect(@nightreader.translate("0.0.0.0.0..00.0.0.00\n00.00.0..000.0000..0\n....0.0.0..00.0.0...")).to eq("hello world") #might to rewrite imput or function
     end
 
+    it 'can return the alphabet hash' do
+        expect(@nightwriter.alphabet).to be_a(Hash)
+        expect(@nightwriter.key([line1: "0.", line2: "..", line3: ".."])).to eq("a")
+    end
 end
