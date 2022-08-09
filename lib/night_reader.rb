@@ -11,11 +11,11 @@ class NightReader
                 :read_file
 
     def initialize
-        require 'pry'; binding.pry
-        @out_file = File.new(ARGV[1], "w") #maybe .open
+        # require 'pry'; binding.pry
+        @out_file = File.new(ARGV[1], "w") 
         @read_file = File.readlines(ARGV[0])
-        to_write(translate_to_alphabet(braille_splitter(@read_file.join))) #could turn into hash
-        puts "Created '#{ARGV[1]}' containing #{@read_file.join.length / 6} characters" #might need to revisit
+        to_write(translate_to_alphabet(braille_splitter(@read_file.join))) 
+        puts "Created '#{ARGV[1]}' containing #{@read_file.join.length / 6} characters" 
     end
 end
 

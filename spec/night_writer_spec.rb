@@ -6,9 +6,6 @@ RSpec.describe NightWriter do
         # allow(@nightwriter).to receive(ARGV[0]).and_return("message.txt")
         # allow(@nightwriter).to receive(ARGV[1]).and_return("braille.txt")
         @nightwriter = NightWriter.new
-
-        #how to initialize with text files
-
     end
 
     it 'exists' do

@@ -3,6 +3,8 @@ require './lib/night_reader.rb'
 
 RSpec.describe NightReader do
     before :each do
+        # allow(@nightwriter).to receive(@read_file).and_return("message.txt")
+        # allow(@nightwriter).to receive(@out_file).and_return("braille.txt")
         @nightreader = NightReader.new
     end
 
