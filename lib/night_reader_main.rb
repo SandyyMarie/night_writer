@@ -11,7 +11,6 @@ class NightReaderMain
                 :read_file
 
     def initialize(to_read, to_write)
-        require 'pry'; binding.pry
         @read_file = File.readlines(to_read)
         @out_file = File.new(to_write, "w") 
         to_write(translate_to_alphabet(braille_splitter(@read_file.join))) 
