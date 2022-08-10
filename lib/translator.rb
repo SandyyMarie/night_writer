@@ -13,7 +13,6 @@ module Translator
 
     def braille_splitter(phrase)
         back_to_letters = ""
-
         phrase.split("\n")
         line1 = phrase.split("\n")[0].scan(/.{2}/)
         line2 = phrase.split("\n")[1].scan(/.{2}/)

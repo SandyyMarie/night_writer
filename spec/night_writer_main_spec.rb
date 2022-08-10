@@ -1,19 +1,19 @@
 require './spec/spec_helper'
-require './lib/night_writer.rb'
+require './lib/night_writer_main.rb'
 
-RSpec.describe NightWriter do
+RSpec.describe NightWriterMain do
     before :each do
-        # allow(@nightwriter).to receive(ARGV[0]).and_return("message.txt")
-        # allow(@nightwriter).to receive(ARGV[1]).and_return("braille.txt")
-        @nightwriter = NightWriter.new
+        read_file = "dummy_alphabet.txt"
+        write_file = "test_dummy.txt"
+        @nightwriter = NightWriterMain.new(read_file, write_file)
     end
 
     it 'exists' do
-        expect(@nightwriter).to be_a(NightWriter)
+        expect(@nightwriter).to be_a(NightWriterMain)
     end
 
     it 'can count the lines in the given file' do
-        expect(@nightwriter.read_file.join.length).to eq(256) 
+        expect(@nightwriter.read_file.join.length).to eq(11) 
     end
 
     it 'can translate a given letter to the braille representation' do
@@ -31,3 +31,4 @@ RSpec.describe NightWriter do
     end
 
 end
+
