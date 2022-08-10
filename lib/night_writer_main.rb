@@ -11,7 +11,6 @@ class NightWriterMain
                 :read_file
 
     def initialize(to_read, to_write)
-        # require 'pry'; binding.pry
         @read_file = File.readlines(to_read)
         @out_file = File.new(to_write, "w") #maybe .open
         to_write(translate_to_braille(@read_file.join)) 

@@ -15,13 +15,7 @@ RSpec.describe NightReaderMain do
     it 'can count the lines in the given file' do
         expect(@nightreader.read_file.join.length).to eq(68) 
     end
-
-    # xit 'can split the braille phrases coming in into a set of paired arrays representing individual letters' do
-    #     phrase = ["0.0.0.0.0..00.0.0.00\n00.00.0..000.0000..0\n....0.0.0..00.0.0..."]
-    #     expect(@nightreader.braille_splitter(phrase.to_s)).to eq(["0.", "00", ".."], ["0.", ".0", ".."], ["0.", "0.", "0."], ["0.", "0.", "0."], ["0.", ".0", "0."], ["..", "..", ".."], [".0", "00", ".0"], ["0.", ".0", "0."], ["0.", "00", "0."], ["0.", "0.", "0."], ["00", ".0", ".."])
-    # end
-    #^ works when tested in pry, 100% coverage without it
-
+    
     it 'can print "hello world"' do
         expect(@nightreader.translate_to_alphabet([["0.", "00", ".."], ["0.", ".0", ".."], ["0.", "0.", "0."], ["0.", "0.", "0."], ["0.", ".0", "0."], ["..", "..", ".."], [".0", "00", ".0"], ["0.", ".0", "0."], ["0.", "00", "0."], ["0.", "0.", "0."], ["00", ".0", ".."]])).to eq("hello world")
     end
