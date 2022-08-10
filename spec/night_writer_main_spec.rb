@@ -3,7 +3,7 @@ require './lib/night_writer_main.rb'
 
 RSpec.describe NightWriterMain do
     before :each do
-        read_file = "message.txt"
+        read_file = "dummy_alphabet.txt"
         write_file = "test_dummy.txt"
         @nightwriter = NightWriterMain.new(read_file, write_file)
     end
@@ -13,7 +13,7 @@ RSpec.describe NightWriterMain do
     end
 
     it 'can count the lines in the given file' do
-        expect(@nightwriter.read_file.join.length).to eq(256) 
+        expect(@nightwriter.read_file.join.length).to eq(11) 
     end
 
     it 'can translate a given letter to the braille representation' do

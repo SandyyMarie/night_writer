@@ -2,7 +2,7 @@ require_relative './dictionary'
 require_relative './translator'
 require_relative './doc_writer'
 
-class NightWriterMain
+class NightReaderMain
     include Dictionary
     include Translator
     include DocWriter
@@ -11,9 +11,9 @@ class NightWriterMain
                 :read_file
 
     def initialize(to_read, to_write)
-        # require 'pry'; binding.pry
+        require 'pry'; binding.pry
         @read_file = File.readlines(to_read)
-        @out_file = File.new(to_write, "w") #maybe .open
-        to_write(translate_to_braille(@read_file.join)) 
+        @out_file = File.new(to_write, "w") 
+        to_write(translate_to_alphabet(braille_splitter(@read_file.join))) 
     end
 end
